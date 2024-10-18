@@ -1,0 +1,11 @@
+<!-- update_book.html -->
+<form method="post">
+    {% csrf_token %}
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{ book.title }}" required>
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" value="{{ book.author }}" required>
+    <label for="published_year">Published Year:</label>
+    <input type="number" id="published_year" name="published_year" value="{{ book.published_year }}" required>
+    <button type="submit">Update Book</button>
+</form>
